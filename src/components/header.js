@@ -75,6 +75,6 @@ const useStyles = makeStyles((theme) => ({
  },
  arrowDown: {
      color: '#5AFF',
-     fontSize: '8rem',
+     fontSize: '10rem',
  }
 }));

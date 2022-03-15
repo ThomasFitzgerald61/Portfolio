@@ -5,6 +5,8 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Collapse } from '@material-ui/core';
+import IconButton from '@mui/material/IconButton';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 export default function ImageCard({ project, checked }) {
     const classes = useStyles();
@@ -33,6 +35,9 @@ export default function ImageCard({ project, checked }) {
           {project.description}
         </Typography>
       </CardContent>
+      <IconButton className={classes.icon} aria-label="share">
+          <GitHubIcon />
+      </IconButton>
     </Card>
     </Collapse>
   );
@@ -42,7 +47,7 @@ const useStyles = makeStyles({
     root: {
       maxWidth: 645,
       margin: '20px',
-      // opacity: '0.3',
+      opacity: '0.9',
       backgroundColor: 'green',
     },
     media: {
@@ -60,5 +65,8 @@ const useStyles = makeStyles({
       fontFamily: 'Fredoka',
       fontSize: '1.1rem',
       color: '#ddd',
+    },
+    icon: {
+      margin: '10px'
     },
   });
