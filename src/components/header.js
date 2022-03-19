@@ -18,20 +18,20 @@ export default function Header() {
                 <h1 className={classes.appBarTitle}>
                     My<span className={classes.colorTitle}>Portfolio.</span>
                     </h1>
-                <IconButton className={classes.icon}>
-                    <SortIcon /> 
+                <IconButton className={classes.icon} >
+                    <SortIcon fontSize="large" /> 
                 </IconButton>
                 </Toolbar>
             </AppBar>
             
-            <Collapse in={checked} { ...(checked ? { timeout: 2000 } : {})}collapseHeight={50}>
+            <Collapse in={checked} { ...(checked ? { timeout: 4000 } : {})}collapseHeight={50}>
                 <div className={classes.container}>
                 <h1 className={classes.title}>
                     Welcome to<br />My<span className={classes.colorTitle}>Portfolio.</span>
                 </h1>
                 <Scroll to='next' smooth={true}>
                 <IconButton>
-                    <ArrowDownwardIcon className={classes.arrowDown} />
+                    <ArrowDownwardIcon className={classes.arrowDown} style={{ fontSize: 60 }} />
                 </IconButton>
                 </Scroll>
                 </div>
@@ -58,6 +58,7 @@ const useStyles = makeStyles((theme) => ({
  },
  appBarTitle: {
      flexGrow: '1',
+     fontSize: '40px',
  },
  appBarWrapper: {
      width: '80%',

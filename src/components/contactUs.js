@@ -6,7 +6,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 
 export default function ContactUs() {
   const classes = useStyles();
@@ -15,7 +15,7 @@ export default function ContactUs() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('gmail', 'template_fpf2z1o', form.current, 'Jo79GXw3xksZHet9_')
+    emailjs.sendForm('service_fo9k58c', 'template_fpf2z1o', form.current, 'Jo79GXw3xksZHet9_')
       .then((result) => {
           console.log(result.text);
       }, (error) => {

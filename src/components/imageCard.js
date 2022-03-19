@@ -36,7 +36,7 @@ export default function ImageCard({ project, checked }) {
         </Typography>
       </CardContent>
       <IconButton className={classes.icon} aria-label="share">
-          <GitHubIcon />
+          <GitHubIcon  fontSize="large" />
       </IconButton>
     </Card>
     </Collapse>

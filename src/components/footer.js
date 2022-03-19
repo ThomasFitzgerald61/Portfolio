@@ -11,7 +11,7 @@ export default function footer() {
   return (
     <div className={classes.footer}>
       <Toolbar className={classes.wrapper}>
-        <h1 className='classes.title'>ContactMe</h1>
+        <h1 className='classes.title'>Thomas Fitzgerald</h1>
         <IconButton className={classes.appBarWrapper} elevation={0}>
         <HomeIcon style={{ color: 'white', margin: '15' }}>Other</HomeIcon>
         <LinkedInIcon link={''} style={{ color: 'white', margin: '15' }}>Linkedin</LinkedInIcon>
@@ -32,7 +32,7 @@ const UseStyles = makeStyles((theme) => ({
         bottom: '0',
         width: '100%',
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'space-around',
         alignItems: 'center',
         height: '13vh',
         color: '#fff',

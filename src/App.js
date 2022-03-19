@@ -12,6 +12,7 @@ export default function App () {
       <CssBaseline />
       <Header />
       <Projects />
+     {/* <AboutMe /> */}
       <ContactUs />
       <Footer /> 
     </div>;
