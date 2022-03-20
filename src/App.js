@@ -3,8 +3,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import { CssBaseline} from '@material-ui/core';
 import Header from './components/header.js';
 import Projects from './components/projects';
-import Footer from './components/footer.js';
+import AboutMe from './components/aboutMe'
 import ContactUs from './components/contactUs.js';
+import Footer from './components/footer.js';
+import Skills from './components/skills.js';
 
 export default function App () {
   const classes = UseStyles();
@@ -12,7 +14,8 @@ export default function App () {
       <CssBaseline />
       <Header />
       <Projects />
-     {/* <AboutMe /> */}
+      <AboutMe />
+      <Skills />
       <ContactUs />
       <Footer /> 
     </div>;
