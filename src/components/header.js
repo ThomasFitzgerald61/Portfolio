@@ -24,7 +24,7 @@ export default function Header() {
                 </Toolbar>
             </AppBar>
             
-            <Collapse in={checked} { ...(checked ? { timeout: 4000 } : {})}collapseHeight={50}>
+            <Collapse in={checked} { ...(checked ? { timeout: 5000 } : {})}collapseHeight={50}>
                 <div className={classes.container}>
                 <h1 className={classes.title}>
                     Welcome to<br />My<span className={classes.colorTitle}>Portfolio.</span>
