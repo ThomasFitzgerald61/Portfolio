@@ -64,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    opacity: '0.9',
+    opacity: '0.8',
     backgroundColor: 'green',
   },
   container: {

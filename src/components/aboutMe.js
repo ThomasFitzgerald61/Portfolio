@@ -16,7 +16,10 @@ export default function AboutMe() {
           <h1 className={classes.appBarTitle}>
                     About<span className={classes.colorTitle}>Me.</span>
         </h1>
-    <Card className={classes.card} >
+    <Card className={classes.card} >  
+
+{/* background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); */}
+
       <Box >
         <CardContent sx={{ flex: '1 0 auto' }}>
           <Typography className={classes.title} component="div" variant="h5">
@@ -25,7 +28,7 @@ export default function AboutMe() {
           <Typography className={classes.subTitle} variant="h6" color="text.secondary" component="div">
             About Me
           </Typography>
-          <Typography className={classes.title} component="div" variant="h7">
+          <Typography className={classes.text} component="div" variant="h7">
             <Typography> Full-Stack Developer,</Typography>
             <Typography> From Melbourne Australia,</Typography>
             <Typography> Works well in a Team,</Typography>
@@ -50,7 +53,8 @@ export default function AboutMe() {
 
 const UseStyles = makeStyles((theme) => ({
     root: {
-
+        fontFamily: 'Fredoka',
+        opacity: '0.8',
     },
     card: {
         height: '500px, auto',
@@ -59,7 +63,6 @@ const UseStyles = makeStyles((theme) => ({
         alignItems: 'center',
         margin: '30px',
         display: 'center',
-        background: '#bfefe',
     },
     appBarTitle: {
         flexGrow: 'flex',
@@ -74,13 +77,16 @@ const UseStyles = makeStyles((theme) => ({
       color: '#5AFF',
     },
     title: {
+        fontFamily: 'Fredoka',
         marginLeft: '15px',
         marginTop: '15px',
+        font: '#5AFF',
     },
     subTitle: {
-
+        fontFamily: 'Fredoka',
     },
     image: {
+        fontFamily: 'Fredoka',
         display: 'inline-flex',
     },
 }));
