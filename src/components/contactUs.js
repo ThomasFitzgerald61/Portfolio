@@ -26,7 +26,7 @@ export default function ContactUs( checked ) {
   };
 
   return (
-    <Collapse className={classes.card} in={checked} { ...(checked ? { timeout: 1000 } : {})}collapseHeight={50}>
+    <Collapse id='ContactMe' className={classes.card} in={checked} { ...(checked ? { timeout: 1000 } : {})}collapseHeight={50}>
       <h1 className={classes.appBarTitle}>
                     Contact<span className={classes.colorTitle}>Me.</span>
                     </h1>
@@ -35,19 +35,23 @@ export default function ContactUs( checked ) {
         <Box>
       <form className={classes.card} ref={form} onSubmit={sendEmail}>
       <div>
-        <label>Name:</label>
-        <input type="text" name="to_name" />
+        <label>Full Name:</label>
+        <input className={classes.box} type="text" name="to_name" />
       </div>
       <div>
-      <label>Email:</label>
-      <input type="email" name="from_name" />
+      <label>Email Address:</label>
+      <input className={classes.box} type="email" name="from_name" />
       </div>
       <div>
-      <label>Message:</label>
-      <textarea name="message" />
+      <label>Subject:</label>
+      <input className={classes.box} type="subject" name="subject" />
       </div>
-      <Stack direction="row" spacing={2}>
-      <Button className={classes.button} type="submit" value="Send" size="10px" variant="contained" endIcon={<SendIcon />} >
+      <div>
+      <label className={classes.message}>Message:</label>
+      <textarea className={classes.messageBox} name="message" />
+      </div>
+      <Stack>
+      <Button className={classes.buttonSend} type="submit" value="Send" size="10px" variant="contained" endIcon={<SendIcon />} >
         Send
       </Button>
       </Stack>
@@ -77,10 +81,11 @@ const useStyles = makeStyles((theme) => ({
     color: '#5AFF',
   },
   card: {
-    justifyContent: 'center',
+    justifyContent: 'stretch',
     maxWidth: '500px',
     margin:'auto',
     flexDirection: 'column',
+    alignItems: 'center',
   },
   desc: {
     fontFamily: 'Fredoka',
@@ -90,24 +95,36 @@ const useStyles = makeStyles((theme) => ({
   icon: {
     margin: '10px'
   },
-  button: {
-    justifyContent: 'center',
-    display: 'flex',
-  },
   appBarTitle: {
     flexGrow: '1',
     fontFamily: 'Fredoka',
     color: 'white',
     display: 'flex',
-    fontSize: '40px',
+    fontSize: '60px',
     justifyContent: 'center',
     alignItems: 'center',
 },
-colorTitle: {
-  color: '#5AFF',
+  colorTitle: {
+    color: '#5AFF',
 },
-buttonSend: {
-  font: 'white',
-  box: 'blue',
+  buttonSend: {
+    font: 'white',
+    box: 'blue',
+    marginLeft: '20px',
+    marginRight: '',
+},
+  messageBox: {
+    height: '100px',
+    width: '300px',
+    alignItems: 'right',
+},
+box: {
+  maxWidth: '200px',
+  justifyContent: 'stretch',
+  flex: '1',
+  alignItems: 'right',
+},
+message: {
+  margin: '10px',
 },
 }));

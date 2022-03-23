@@ -10,7 +10,7 @@ export default function Projects() {
     const classes = useStyles();
     const checked = useWindowPosition('header');
     return (
-      <div>
+      <div id='Projects' >
         <h1 className={classes.appBarTitle}>
                     My<span className={classes.colorTitle}>Projects.</span>
                     </h1>
@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'Fredoka',
         color: 'white',
         display: 'flex',
-        fontSize: '40px',
+        fontSize: '60px',
         justifyContent: 'center',
         alignItems: 'center',
     },

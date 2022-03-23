@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { AppBar, IconButton, Toolbar, Collapse } from '@material-ui/core';
-import SortIcon from '@material-ui/icons/Sort';
+import BasicMenu from './dropDownMenu';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import { Link as Scroll } from 'react-scroll';
 
@@ -19,7 +19,7 @@ export default function Header() {
                     My<span className={classes.colorTitle}>Portfolio.</span>
                     </h1>
                 <IconButton className={classes.icon} >
-                    <SortIcon fontSize="large" /> 
+                    <BasicMenu /> 
                 </IconButton>
                 </Toolbar>
             </AppBar>
@@ -27,8 +27,9 @@ export default function Header() {
             <Collapse in={checked} { ...(checked ? { timeout: 5000 } : {})}collapseHeight={50}>
                 <div className={classes.container}>
                 <h1 className={classes.title}>
-                    Welcome to<br />My<span className={classes.colorTitle}>Portfolio.</span>
+                    Hi, I'm Thomas,<br /><span className={classes.colorTitle}>Fullstack Developer  <br />& UI UX Designer</span>
                 </h1>
+                <h2 className={classes.subtitle}>Welcome to my Portfolio</h2>
                 <Scroll to='next' smooth={true}>
                 <IconButton>
                     <ArrowDownwardIcon className={classes.arrowDown} style={{ fontSize: 60 }} />
@@ -77,5 +78,9 @@ const useStyles = makeStyles((theme) => ({
  arrowDown: {
      color: '#5AFF',
      fontSize: '10rem',
- }
+ },
+ subtitle: {
+    color: '#fff',
+    fontSize: '2rem',
+ },
 }));

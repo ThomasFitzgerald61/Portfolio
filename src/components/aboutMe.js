@@ -12,7 +12,7 @@ export default function AboutMe() {
 
 
   return (
-      <div className={classes.root}>
+      <div id='AboutMe' className={classes.root}>
           <h1 className={classes.appBarTitle}>
                     About<span className={classes.colorTitle}>Me.</span>
         </h1>
@@ -22,14 +22,21 @@ export default function AboutMe() {
 
       <Box >
         <CardContent sx={{ flex: '1 0 auto' }}>
-          <Typography className={classes.title} component="div" variant="h5">
+          <Typography className={classes.title} component="div" variant="h2">
             Thomas Fitzgerald
           </Typography>
-          <Typography className={classes.subTitle} variant="h6" color="text.secondary" component="div">
+          <Typography className={classes.subTitle} variant="h4" color="text.secondary" component="div">
             About Me
           </Typography>
-          <Typography className={classes.text} component="div" variant="h7">
+          <Typography className={classes.text} component="div" variant="h6">
             <Typography> Full-Stack Developer,</Typography>
+            <Typography> From Melbourne Australia,</Typography>
+            <Typography> Works well in a Team,</Typography>
+            <Typography> Javascript,</Typography>
+            <Typography> React & React-Native,</Typography>
+            <Typography> Loves to learn,</Typography>
+            <Typography> Please consider me when looking for new team members,</Typography>
+            <Typography> Clink the link below to access my CV,</Typography>
             <Typography> From Melbourne Australia,</Typography>
             <Typography> Works well in a Team,</Typography>
             <Typography> Javascript,</Typography>
@@ -69,7 +76,7 @@ const UseStyles = makeStyles((theme) => ({
         fontFamily: 'Fredoka',
         color: 'white',
         display: 'flex',
-        fontSize: '40px',
+        fontSize: '60px',
         justifyContent: 'center',
         alignItems: 'center',
     },
