@@ -38,6 +38,11 @@ export default function BasicMenu() {
         }}
       >
         <MenuItem>
+            <Link to='header' spy={true} smooth={true} offset={-70} duration={500} onClick={handleClose}>
+                Home
+            </Link>
+        </MenuItem>
+        <MenuItem>
             <Link to='Projects' spy={true} smooth={true} offset={-70} duration={500} onClick={handleClose}>
                 My Projects
             </Link>
