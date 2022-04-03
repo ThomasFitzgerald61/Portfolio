@@ -61,7 +61,6 @@ export default function AboutMe() {
 const UseStyles = makeStyles((theme) => ({
     root: {
         fontFamily: 'Fredoka',
-        opacity: '0.8',
     },
     card: {
         height: '500px, auto',
