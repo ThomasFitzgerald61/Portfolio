@@ -1,11 +1,10 @@
 import * as React from 'react';
-import { useTheme } from '@mui/material/styles';
 import { makeStyles } from '@material-ui/styles';
-import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import Avatar from '../images/avatar.png'
+import Button from '@mui/material/Button';
 
 export default function AboutMe() {
     const classes = UseStyles();
@@ -17,42 +16,26 @@ export default function AboutMe() {
                     About<span className={classes.colorTitle}>Me.</span>
         </h1>
     <Card className={classes.card} >  
-
-{/* background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); */}
-
-      <Box >
         <CardContent sx={{ flex: '1 0 auto' }}>
-          <Typography className={classes.title} component="div" variant="h2">
+          <Typography className={classes.title} component="div" variant="h2" fontFamily="fredoka" >
             Thomas Fitzgerald
           </Typography>
+          <div className={classes.image}>
+            <img src={Avatar} component="img" alt="Avatar" />
+        </div>
           <Typography className={classes.subTitle} variant="h4" color="text.secondary" component="div">
             About Me
           </Typography>
           <Typography className={classes.text} component="div" variant="h6">
             <Typography> Full-Stack Developer,</Typography>
-            <Typography> From Melbourne Australia,</Typography>
-            <Typography> Works well in a Team,</Typography>
-            <Typography> Javascript,</Typography>
-            <Typography> React & React-Native,</Typography>
-            <Typography> Loves to learn,</Typography>
-            <Typography> Please consider me when looking for new team members,</Typography>
-            <Typography> Clink the link below to access my CV,</Typography>
-            <Typography> From Melbourne Australia,</Typography>
-            <Typography> Works well in a Team,</Typography>
-            <Typography> Javascript,</Typography>
-            <Typography> React & React-Native,</Typography>
-            <Typography> Loves to learn,</Typography>
-            <Typography> Please consider me when looking for new team members,</Typography>
-            <Typography> Clink the link below to access my CV,</Typography>
           </Typography>
+          <Typography className={classes.text} >
+            <Typography> Clink the link below to access my Resume,</Typography>
+          </Typography>
+            <div className={classes.button} >
+            <Button variant="contained">Resume</Button>
+            </div>
         </CardContent>
-      </Box>
-      <CardMedia className={classes.image}
-        component="img"
-        href="%PUBLIC_URL%/avatar.png"
-        image= '../public/assets/avatar.png'
-        alt="Avatar"
-      />
     </Card>
     </div>
   );
@@ -61,14 +44,18 @@ export default function AboutMe() {
 const UseStyles = makeStyles((theme) => ({
     root: {
         fontFamily: 'Fredoka',
-    },
-    card: {
-        height: '500px, auto',
-        width: '1000px, auto',
         justifyContent: 'center',
         alignItems: 'center',
-        margin: '30px',
-        display: 'center',
+        flexGrow: '1',
+    },
+    card: {
+        height: 'auto',
+        maxWidth: '80%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        margin: 'auto',
+        display: 'flex',
+        opacity: '0.8',
     },
     appBarTitle: {
         flexGrow: 'flex',
@@ -80,19 +67,41 @@ const UseStyles = makeStyles((theme) => ({
         alignItems: 'center',
     },
     colorTitle: {
-      color: '#5AFF',
+      color: '#ffc0cb',
     },
     title: {
         fontFamily: 'Fredoka',
         marginLeft: '15px',
         marginTop: '15px',
         font: '#5AFF',
+        justifyContent: 'center',
+        alignItems: 'center',
+        display: 'flex',
+        color: '#ffc0cb',
     },
     subTitle: {
         fontFamily: 'Fredoka',
+        justifyContent: 'center',
+        alignItems: 'center',
+        display: 'flex',
+        color: '#5AFF',
     },
     image: {
         fontFamily: 'Fredoka',
-        display: 'inline-flex',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        displayImage: 'center',
+    },
+    text: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        display: 'flex',
+    },
+    button: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        display: 'flex',
+        spacing: '2',
     },
 }));

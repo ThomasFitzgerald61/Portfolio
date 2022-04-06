@@ -16,13 +16,19 @@ export default function footer() {
     <div className={classes.footer}>
       <Toolbar className={classes.wrapper}>
         <h1 className='classes.title'>Thomas Fitzgerald</h1>
-            <IconButton className={classes.appBarWrapper} elevation={0} onClick={handleClick}>
-        <Link to='header' spy={true} smooth={true} offset={-70} duration={500}>
-        <HomeIcon style={{ color: 'white', margin: '15' }}>Other</HomeIcon>
-        </Link>       
-        <LinkedInIcon link={''} style={{ color: 'white', margin: '15' }}>Linkedin</LinkedInIcon>
-        <GitHubIcon href={'https://github.com/ThomasFitzgerald61'} style={{ color: 'white', margin: '15' }}>GitHub</GitHubIcon>
-        <MailIcon style={{ color: 'white', margin: '15' }}>Other</MailIcon>
+        <IconButton className={classes.appBarWrapper} elevation={0} onClick={handleClick}>
+        <Link underline='none' to="header" >
+        <HomeIcon style={{ color: 'white', margin: '15' }}></HomeIcon>
+        </Link>
+        <Link underline="none"  href="#https://www.linkedin.com/in/thomas-fitzgerald-333a55174/" >     
+        <LinkedInIcon link={''} style={{ color: 'white', margin: '15' }}></LinkedInIcon>
+        </Link>  
+        <Link href='#https://github.com/ThomasFitzgerald61' >
+        <GitHubIcon  style={{ color: 'white', margin: '15' }}></GitHubIcon>
+        </Link>
+        <Link>
+        <MailIcon style={{ color: 'white', margin: '15' }}></MailIcon>
+        </Link>
         </IconButton>
       </Toolbar>
     </div>
@@ -41,18 +47,18 @@ const UseStyles = makeStyles((theme) => ({
         justifyContent: 'space-around',
         alignItems: 'center',
         height: '13vh',
-        color: '#fff',
+        color: '#ffc0cb',
       },
       wrapper: {
-        color: '#fff',
+        color: '#ffc0cb',
       },
     title: {
-        color: '#ffffff',
+        color: '#ffc0cb',
         fontFamily: 'Fredoka',
         flexDirection: 'left',
       },
     appBarWrapper: {
-        width: '80%',
-        margin: '10px',
+        width: '70%',
+        margin: '15px',
     },
 }));

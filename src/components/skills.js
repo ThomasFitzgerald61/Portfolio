@@ -39,7 +39,7 @@ const UseStyles = makeStyles((theme) => ({
         alignItems: 'center',
     },
     colorTitle: {
-      color: '#5AFF',
+      color: '#ffc0cb',
     },
     card: {
         height: 'auto',

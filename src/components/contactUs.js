@@ -104,7 +104,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
 },
   colorTitle: {
-    color: '#5AFF',
+    color: '#ffc0cb',
 },
   buttonSend: {
     font: 'white',

@@ -24,6 +24,7 @@ export default function ImageCard({ project, checked }) {
         <Typography 
         gutterBottom variant="h5" 
         component="h1" 
+        fontWeight="bold"
         className={classes.title}
         >
           {project.title}
@@ -55,9 +56,9 @@ const useStyles = makeStyles({
     },
     title: {
       fontFamily: 'Fredoka',
-      fontWeight: 'bold',
-      fontSize: '2rem',
-      color: '#5AFF',
+      fontWeight: '60px',
+      fontSize: '3rem',
+      color: '#ffc0cb',
     },
     cardContent: {
     },
