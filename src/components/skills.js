@@ -29,6 +29,10 @@ return (
 }
 
 const UseStyles = makeStyles((theme) => ({
+    root: {
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
     appBarTitle: {
         flexGrow: '1',
         fontFamily: 'Fredoka',

@@ -17,18 +17,18 @@ export default function footer() {
       <Toolbar className={classes.wrapper}>
         <h1 className='classes.title'>Thomas Fitzgerald</h1>
         <IconButton className={classes.appBarWrapper} elevation={0} onClick={handleClick}>
-        <Link underline='none' to="header" >
+        <a underline='none' to="header" >
         <HomeIcon style={{ color: 'white', margin: '15' }}></HomeIcon>
-        </Link>
-        <Link underline="none"  href="#https://www.linkedin.com/in/thomas-fitzgerald-333a55174/" >     
-        <LinkedInIcon link={''} style={{ color: 'white', margin: '15' }}></LinkedInIcon>
-        </Link>  
-        <Link href='#https://github.com/ThomasFitzgerald61' >
+        </a>
+        <a target="_blank" href="https://www.linkedin.com/in/thomas-fitzgerald-333a55174/" rel="noopener" >     
+        <LinkedInIcon style={{ color: 'white', margin: '15' }}></LinkedInIcon>
+        </a>  
+        <a target="_blank" href='https://github.com/ThomasFitzgerald61' >
         <GitHubIcon  style={{ color: 'white', margin: '15' }}></GitHubIcon>
-        </Link>
-        <Link>
+        </a>
+        <a>
         <MailIcon style={{ color: 'white', margin: '15' }}></MailIcon>
-        </Link>
+        </a>
         </IconButton>
       </Toolbar>
     </div>
