@@ -17,8 +17,8 @@ export default function Projects() {
          <div className={classes.root} id='next'>
             <ImageCard project={project[0]} checked={checked} />
             <ImageCard project={project[1]} checked={checked} />
-            <ImageCard project={project[0]} checked={checked} />
-            <ImageCard project={project[1]} checked={checked} />
+            <ImageCard project={project[2]} checked={checked} />
+            <ImageCard project={project[3]} checked={checked} />
         </div>
       </div>
   )

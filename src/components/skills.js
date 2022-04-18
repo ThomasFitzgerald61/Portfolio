@@ -6,11 +6,11 @@ import Card from '@mui/material/Card';
 export default function Skills() {
     const classes = UseStyles();
 return (
-    <div id='Skills' className={classes.root}>
-        <h1 className={classes.appBarTitle}>
+    <div id='Skills' className={classes.root} >
+        <h1 sx={{ display: { xs: 'none', md: 'block', lg: 'none' } }} className={classes.appBarTitle}>
                     My<span className={classes.colorTitle}>Skills.</span>
         </h1>
-        <Card className={classes.card}>
+        <Card className={classes.card} sx={{ display: { xs: 'none', md: 'block' }}}>
         <div className={classes.container}>
         <CircleProgress percentage={90} strokeWidth={20} primaryColor={["#2193b0", "#6dd5ed"]} secondaryColor="#f0f0f0"  fontSize="20px" /> HTML
         <CircleProgress percentage={90} strokeWidth={20} primaryColor={["#11FFBD", "#AAFFB9"]} secondaryColor="#f0f0f0"  fontSize="20px" /> CSS
@@ -53,6 +53,7 @@ const UseStyles = makeStyles((theme) => ({
         margin: '80px',
         display: 'center',
         backgroundColor: 'rgba(52, 52, 52, 0.2)',
+
     },
     container: {
         justifyContent: 'center',

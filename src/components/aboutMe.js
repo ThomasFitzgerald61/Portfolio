@@ -5,6 +5,8 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import Avatar from '../images/avatar.png'
 import Button from '@mui/material/Button';
+import Pdf from '../assets/Thomas Fitzgerald Resume.pdf';
+import Cert from '../assets/Full-Stack Engineer Certificate.pdf';
 
 export default function AboutMe() {
     const classes = UseStyles();
@@ -17,11 +19,13 @@ export default function AboutMe() {
         </h1>
     <Card className={classes.card} >  
         <CardContent sx={{ flex: '1 0 auto' }}>
-          <Typography className={classes.title} component="div" variant="h2" fontFamily="fredoka" >
-            Thomas Fitzgerald
-          </Typography>
+          <div className={classes.title} fontFamily="fredoka" >
+            Thomas 
+            <br />
+            Fitzgerald
+          </div>
           <div className={classes.image}>
-            <img src={Avatar} component="img" alt="Avatar" />
+            <img className={classes.pic} src={Avatar} alt="Avatar" width={250} height={250} />
         </div>
           <Typography className={classes.subTitle} variant="h4" color="text.secondary" component="div">
             About Me
@@ -33,7 +37,14 @@ export default function AboutMe() {
             <Typography> Clink the link below to access my Resume,</Typography>
           </Typography>
             <div className={classes.button} >
-            <Button variant="contained">Resume</Button>
+            <Button variant="contained" href={Pdf} target='_blank' rel='noopener noreferrer'>
+                Resume
+            </Button>
+            </div>
+            <div className={classes.button} >
+            <Button variant="contained" href={Cert} target='_blank' rel='noopener noreferrer'>
+                Certificate
+            </Button>
             </div>
         </CardContent>
     </Card>
@@ -50,7 +61,7 @@ const UseStyles = makeStyles((theme) => ({
     },
     card: {
         height: 'auto',
-        maxWidth: '80%',
+        maxWidth: '90%',
         justifyContent: 'center',
         alignItems: 'center',
         margin: 'auto',
@@ -71,7 +82,9 @@ const UseStyles = makeStyles((theme) => ({
     },
     title: {
         fontFamily: 'Fredoka',
-        marginLeft: '15px',
+        flexGrow: 'flex',
+        fontSize: '70px',
+        fontWeight: 'bold',
         marginTop: '15px',
         font: '#5AFF',
         justifyContent: 'center',
@@ -97,11 +110,18 @@ const UseStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         display: 'flex',
+        flex: '1',
+        resizeMode: 'contain',
     },
     button: {
         justifyContent: 'center',
         alignItems: 'center',
         display: 'flex',
         spacing: '2',
+        marginTop: '5px',
+    },
+    pic: {
+        width: 'auto',
+        height: "auto",
     },
 }));

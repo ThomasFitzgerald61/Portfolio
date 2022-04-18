@@ -5,7 +5,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MailIcon from '@mui/icons-material/Mail';
 import HomeIcon from '@mui/icons-material/Home';
 import { Toolbar, IconButton } from '@material-ui/core';
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 export default function footer() {
     const classes = UseStyles();
@@ -17,17 +17,18 @@ export default function footer() {
       <Toolbar className={classes.wrapper}>
         <h1 className='classes.title'>Thomas Fitzgerald</h1>
         <IconButton className={classes.appBarWrapper} elevation={0} onClick={handleClick}>
-        <a underline='none' to="header" >
+        <Link underline='none' to="header" >
         <HomeIcon style={{ color: 'white', margin: '15' }}></HomeIcon>
-        </a>
+        </Link>
         <a target="_blank" href="https://www.linkedin.com/in/thomas-fitzgerald-333a55174/" rel="noopener" >     
         <LinkedInIcon style={{ color: 'white', margin: '15' }}></LinkedInIcon>
         </a>  
         <a target="_blank" href='https://github.com/ThomasFitzgerald61' >
         <GitHubIcon  style={{ color: 'white', margin: '15' }}></GitHubIcon>
         </a>
-        <a>
-        <MailIcon style={{ color: 'white', margin: '15' }}></MailIcon>
+        <a target="_blank" href='mailto:thomasfitzgerald61@gmail.com.tld?subject=Profile page subject: ' >
+        <MailIcon style={{ color: 'white', margin: '15' }}>
+        </MailIcon>
         </a>
         </IconButton>
       </Toolbar>

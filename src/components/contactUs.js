@@ -36,15 +36,15 @@ export default function ContactUs( checked ) {
       <form className={classes.card} ref={form} onSubmit={sendEmail}>
       <div>
         <label>Full Name:</label>
-        <input className={classes.box} type="text" name="to_name" />
+        <input className={classes.nameBox} type="text" name="to_name" />
       </div>
       <div>
-      <label>Email Address:</label>
-      <input className={classes.box} type="email" name="from_name" />
+      <label>Email:</label>
+      <input className={classes.addressBox} type="email" name="from_name" />
       </div>
       <div>
       <label>Subject:</label>
-      <input className={classes.box} type="subject" name="subject" />
+      <input className={classes.subjectBox} type="subject" name="subject" />
       </div>
       <div>
       <label className={classes.message}>Message:</label>
@@ -81,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
   },
   card: {
     justifyContent: 'stretch',
-    maxWidth: '500px',
+    maxWidth: '90%',
     margin:'auto',
     flexDirection: 'column',
     alignItems: 'center',
@@ -112,18 +112,33 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '20px',
     marginRight: '',
 },
-  messageBox: {
+messageBox: {
     height: '100px',
     width: '300px',
     alignItems: 'right',
 },
-box: {
-  maxWidth: '200px',
+nameBox: {
+  width: '180px',
+  height: '30px',
   justifyContent: 'stretch',
+  display: 'right',
   flex: '1',
   alignItems: 'right',
 },
-message: {
-  margin: '10px',
+addressBox: {
+  width: '220px',
+  height: '30px',
+  justifyContent: 'stretch',
+  flex: '1',
+  display: 'right',
+  alignItems: 'right',
+},
+subjectBox: {
+  width: '240px',
+  height: '30px',
+  justifyContent: 'stretch',
+  flex: '1',
+  display: 'right',
+  alignItems: 'right',
 },
 }));

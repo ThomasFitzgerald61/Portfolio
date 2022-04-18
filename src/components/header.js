@@ -30,7 +30,7 @@ export default function Header() {
             <Collapse in={checked} { ...(checked ? { timeout: 5000 } : {})}collapseHeight={50}>
                 <div className={classes.container}>
                 <h2 className={classes.title}>
-                    Hi, I'm Thomas,<br /><span className={classes.colorTitle}>Fullstack Developer  <br />& UI UX Designer</span>
+                    Hi, I'm Thomas,<br /><span className={classes.colorTitle}>Full-stack Developer  <br />& UI UX Designer</span>
                 </h2>
                 <h2 className={classes.subtitle}>Welcome to my Portfolio</h2>
                 <Scroll to='next' smooth={true} offset={-120}>
