@@ -52,6 +52,9 @@ const UseStyles = makeStyles((theme) => ({
       },
       wrapper: {
         color: '#ffc0cb',
+        width: "90%",
+        marginLeft: "5px",
+        marginRight: "5px",
       },
     title: {
         color: '#ffc0cb',

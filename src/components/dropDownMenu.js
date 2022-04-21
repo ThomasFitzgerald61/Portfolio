@@ -28,11 +28,12 @@ export default function BasicMenu() {
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
-      >
+        >
         <SortIcon style={{ fontSize: 70 }} />
       </MenuIcon>
       <Menu 
         id="basic-menu" 
+        marginRight="10px"
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
@@ -42,7 +43,7 @@ export default function BasicMenu() {
         }}
       >
         <MenuItem className={classes.root} >
-            <Link to='header' spy={true} smooth={true} offset={-70} duration={500} onClick={handleClose}>
+            <Link to='header' spy={true} smooth={true} offset={-70} duration={500} onClick={handleClose} textAlign="left" >
                 Home
             </Link>
         </MenuItem>

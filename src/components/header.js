@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, IconButton, Toolbar, Collapse, responsiveFontSizes } from '@material-ui/core';
+import { AppBar, IconButton, Toolbar, Collapse } from '@material-ui/core';
 import BasicMenu from './dropDownMenu';
 import MenuIcon from '@mui/icons-material/Menu';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
@@ -30,11 +30,16 @@ export default function Header() {
             
             <Collapse in={checked} { ...(checked ? { timeout: 5000 } : {})}collapseHeight={50}>
                 <div className={classes.container} >
-                <responsiveFontSizes className={classes.title}>
-                    Hi, I'm Thomas,<br /><span className={classes.colorTitle}>Full-Stack Developer<br />& UI UX Designer</span>
-                </responsiveFontSizes>
+                <span className={classes.title}>
+                    Hi, I'm Thomas,<br />
+                    <span sx={{ display: { xs: 'none', md: 'block' }}} className={classes.colorTitle} >
+                        Full-Stack Developer
+                        <br />
+                        & UI UX Designer
+                    </span>
+                </span>
                 <br />
-                <responsiveFontSizes className={classes.subtitle}>Welcome to my Portfolio</responsiveFontSizes>
+                <span className={classes.subtitle}>Welcome to my Portfolio</span>
                 <br />
                 <Scroll to='next' smooth={true} offset={-120}>
                 <IconButton>
@@ -52,6 +57,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    textALign: 'center',
     height: '100vh',
     fontFamily: 'Fredoka',
     fontColor: '#ffffff',
@@ -82,8 +88,10 @@ appBarTitle: {
     background: "transparent"
  },
  container: {
-     width: "90%",
+     width: "100%",
      textAlign: 'center',
+     justifyContent: 'center',
+     alignItems: 'center',
     },
     colorTitle: {
      color: '#ffc0cb',
