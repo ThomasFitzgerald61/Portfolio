@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, IconButton, Toolbar, Collapse } from '@material-ui/core';
+import { AppBar, IconButton, Toolbar, Collapse, responsiveFontSizes } from '@material-ui/core';
 import BasicMenu from './dropDownMenu';
 import MenuIcon from '@mui/icons-material/Menu';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
@@ -23,17 +23,19 @@ export default function Header() {
                   </Link>
                 </h1>
                 <IconButton className={classes.basicMenu} >
-                    <BasicMenu style={{ fontSize: 60, color: "#ffffff" }} /> 
+                    <BasicMenu style={{ fontSize: 50, color: "#ffffff" }} /> 
                 </IconButton>
                 </Toolbar>
             </AppBar>
             
             <Collapse in={checked} { ...(checked ? { timeout: 5000 } : {})}collapseHeight={50}>
                 <div className={classes.container} >
-                <h2 className={classes.title}>
-                    Hi, I'm Thomas,<br /><span className={classes.colorTitle}>Fullstack Developer  <br />& UI UX Designer</span>
-                </h2>
-                <h2 className={classes.subtitle}>Welcome to my Portfolio</h2>
+                <responsiveFontSizes className={classes.title}>
+                    Hi, I'm Thomas,<br /><span className={classes.colorTitle}>Full-Stack Developer<br />& UI UX Designer</span>
+                </responsiveFontSizes>
+                <br />
+                <responsiveFontSizes className={classes.subtitle}>Welcome to my Portfolio</responsiveFontSizes>
+                <br />
                 <Scroll to='next' smooth={true} offset={-120}>
                 <IconButton>
                     <ArrowDownwardIcon className={classes.arrowDown} style={{ fontSize: 60 }} />
@@ -61,7 +63,7 @@ appBar: {
     color: '#ffffff',
 },
 basicMenu: {
-    marginRight: '20px',
+    marginRight: '60px',
     marginTop: '-50px',
     fontSize: '10rem',
     color: '#ffffff',
@@ -80,16 +82,10 @@ appBarTitle: {
     background: "transparent"
  },
  container: {
+     width: "90%",
      textAlign: 'center',
-     fontSize: '1.2rem',
-     '@media (min-width:600px)': {
-       fontSize: '1.5rem',
-     },
-     [theme.breakpoints.up('md')]: {
-       fontSize: '2.4rem',
-     },
     },
- colorTitle: {
+    colorTitle: {
      color: '#ffc0cb',
      fontSize: '44px',
     },

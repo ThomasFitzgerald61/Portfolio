@@ -6,8 +6,10 @@ import MenuItem from '@mui/material/MenuItem';
 import SortIcon from '@material-ui/icons/Sort';
 import Fade from '@mui/material/Fade';
 import { Link, animateScroll as scroll } from "react-scroll";
+import { makeStyles } from '@material-ui/core/styles';
 
 export default function BasicMenu() {
+  const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -27,9 +29,9 @@ export default function BasicMenu() {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        <SortIcon style={{ fontSize: 80 }} />
+        <SortIcon style={{ fontSize: 70 }} />
       </MenuIcon>
-      <Menu
+      <Menu 
         id="basic-menu" 
         anchorEl={anchorEl}
         open={open}
@@ -39,27 +41,27 @@ export default function BasicMenu() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem>
+        <MenuItem className={classes.root} >
             <Link to='header' spy={true} smooth={true} offset={-70} duration={500} onClick={handleClose}>
                 Home
             </Link>
         </MenuItem>
-        <MenuItem>
+        <MenuItem className={classes.root} >
             <Link to='Projects' spy={true} smooth={true} offset={-70} duration={500} onClick={handleClose}>
                 My Projects
             </Link>
         </MenuItem>
-        <MenuItem>
+        <MenuItem className={classes.root} >
             <Link to='AboutMe' spy={true} smooth={true} offset={-70} duration={500} onClick={handleClose}>
                 About Me
             </Link>
         </MenuItem>
-        <MenuItem>
+        <MenuItem className={classes.root} >
             <Link to='Skills' spy={true} smooth={true} offset={-70} duration={500} onClick={handleClose}>
                 My Skills
             </Link>
         </MenuItem>
-        <MenuItem>
+        <MenuItem className={classes.root} >
             <Link to='ContactMe' spy={true} smooth={true} offset={-70} duration={500} onClick={handleClose}>
                 Contact Me
             </Link>
@@ -77,3 +79,9 @@ export default function BasicMenu() {
     offset={-70}
     duration={500}
 ></Link>
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    position: "absolute",
+},
+}));
