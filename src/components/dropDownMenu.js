@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
+import MenuIcon from '@mui/icons-material/Menu';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import SortIcon from '@material-ui/icons/Sort';
@@ -18,17 +19,18 @@ export default function BasicMenu() {
 
   return (
     <div>
-      <Button
+      <MenuIcon 
+        sx={{ fontSize: 60 }}
         id="basic-button"
         aria-controls={open ? 'basic-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        <SortIcon style={{ fontSize: 60 }} />
-      </Button>
+        <SortIcon style={{ fontSize: 80 }} />
+      </MenuIcon>
       <Menu
-        id="basic-menu"
+        id="basic-menu" 
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}

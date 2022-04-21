@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { AppBar, IconButton, Toolbar, Collapse } from '@material-ui/core';
 import BasicMenu from './dropDownMenu';
+import MenuIcon from '@mui/icons-material/Menu';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import { Link as Scroll } from 'react-scroll';
 import Link from '@mui/material/Link';
@@ -28,7 +29,7 @@ export default function Header() {
             </AppBar>
             
             <Collapse in={checked} { ...(checked ? { timeout: 5000 } : {})}collapseHeight={50}>
-                <div className={classes.container}>
+                <div className={classes.container} >
                 <h2 className={classes.title}>
                     Hi, I'm Thomas,<br /><span className={classes.colorTitle}>Fullstack Developer  <br />& UI UX Designer</span>
                 </h2>
@@ -61,7 +62,7 @@ appBar: {
 },
 basicMenu: {
     marginRight: '20px',
-    marginTop: '-20px',
+    marginTop: '-50px',
     fontSize: '10rem',
     color: '#ffffff',
 },
@@ -80,6 +81,13 @@ appBarTitle: {
  },
  container: {
      textAlign: 'center',
+     fontSize: '1.2rem',
+     '@media (min-width:600px)': {
+       fontSize: '1.5rem',
+     },
+     [theme.breakpoints.up('md')]: {
+       fontSize: '2.4rem',
+     },
     },
  colorTitle: {
      color: '#ffc0cb',
