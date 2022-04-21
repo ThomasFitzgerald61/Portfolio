@@ -23,7 +23,7 @@ export default function App () {
   
   const UseStyles = makeStyles((theme) => ({
     root: {
-      minHeight:'80vh',
+      minHeight:'70vh',
       backgroundImage: `url(${process.env.PUBLIC_URL + '/assets/bg.jpg'})`,
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
