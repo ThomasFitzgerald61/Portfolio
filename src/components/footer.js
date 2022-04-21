@@ -40,10 +40,8 @@ const UseStyles = makeStyles((theme) => ({
   margin: theme.spacing(1, 'auto'), // '8px auto'
     footer: {
         marginTop: "1rem",
-        padding: "1rem",
         backgroundColor: "rgb(0,0,0,0.5)",
         bottom: '0',
-        width: '100%',
         display: 'flex',
         justifyContent: 'space-around',
         alignItems: 'center',
@@ -63,6 +61,5 @@ const UseStyles = makeStyles((theme) => ({
       },
     appBarWrapper: {
         width: '70%',
-        margin: '15px',
     },
 }));

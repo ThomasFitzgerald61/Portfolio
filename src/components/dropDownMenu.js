@@ -29,11 +29,11 @@ export default function BasicMenu() {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
         >
-        <SortIcon style={{ fontSize: 70 }} />
+        <SortIcon style={{ fontSize: 70 }} marginRight="10px" />
       </MenuIcon>
       <Menu 
+        className={classes.root}
         id="basic-menu" 
-        marginRight="10px"
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
