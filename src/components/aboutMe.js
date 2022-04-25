@@ -25,7 +25,7 @@ export default function AboutMe() {
             Fitzgerald
           </div>
           <div className={classes.image}>
-            <img className={classes.pic} src={Avatar} alt="Avatar" width={250} height={250} />
+            <img className={classes.pic} src={Avatar} alt="Avatar" width={220} height={220} />
         </div>
           <Typography className={classes.subTitle} variant="h4" color="text.secondary" component="div">
             About Me
@@ -83,9 +83,9 @@ const UseStyles = makeStyles((theme) => ({
     title: {
         fontFamily: 'Fredoka',
         flexGrow: 'flex',
-        fontSize: '70px',
+        fontSize: '60px',
         fontWeight: 'bold',
-        marginTop: '15px',
+        margin: 'auto',
         font: '#5AFF',
         justifyContent: 'center',
         alignItems: 'center',

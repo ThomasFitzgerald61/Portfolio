@@ -14,10 +14,10 @@ const project = [
       time: 1500,
     },
     {
-      title: 'New Project',
+      title: 'Weather App with React',
       description:
-        'To Do List - React Native app! layouts using react native, creating reusable components, passing props to custom components,  styling react native components, state management in react native, adding items to state, removing items from state, dealing with user input, TextInput component, KeyboardAvoidingView component and more!',
-      imageUrl: process.env.PUBLIC_URL + '/assets/ToDoList.png',
+        'Weather app in React JS, using the Open Weather Map API to make calls to a restful api to return the current weather data. This uses the Modern Javascript Fetch AP along with React hooks and conditonals.',
+      imageUrl: process.env.PUBLIC_URL + '/assets/Weather.png',
       time: 1500,
     },
     {
