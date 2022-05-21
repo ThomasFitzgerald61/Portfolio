@@ -18,7 +18,7 @@ export default function Header() {
             <AppBar className={classes.appBar} elevation={0}>
                 <Toolbar className={classes.appBarWrapper}>
                 <h1 className={classes.appBarTitle}>
-                  <Link className={classes.appBarTitle} underline="none" href="header" color="white" >
+                  <Link className={classes.appBarTitle} underline="none" to='header' color="white" >
                     My<span className={classes.colorTitle}>Portfolio.</span>
                   </Link>
                 </h1>
