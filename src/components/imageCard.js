@@ -5,6 +5,9 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Collapse } from '@material-ui/core';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import Button from '@mui/material/Button';
+import OpenInBrowserIcon from '@mui/icons-material/OpenInBrowser';
 
 export default function ImageCard({ project, checked }) {
     const classes = useStyles();
@@ -33,6 +36,28 @@ export default function ImageCard({ project, checked }) {
         color="text.secondary" >
           {project.description}
         </Typography>
+      <a href={project.link} target="_blank" rel="noopener noreferrer" title="Git Repository">
+        <Button>
+          <GitHubIcon 
+            rel="stylesheet"
+            sx={{ 
+              fontSize: 30,
+               color: 'white' 
+            }}
+            />
+        </Button>
+      </a>
+      <a href={project.url} target="_blank" rel="noopener noreferrer" title="Got to web site">
+        <Button>
+          <OpenInBrowserIcon 
+            rel="stylesheet"
+            sx={{ 
+              fontSize: 35, 
+              color: 'white' 
+            }}
+            />
+        </Button>
+      </a>
       </CardContent>
     </Card>
     </Collapse>
