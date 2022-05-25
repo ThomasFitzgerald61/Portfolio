@@ -20,7 +20,7 @@ const project = [
     {
       title: 'Weather App with React',
       description:
-        'Weather app in React JS, using the Open Weather Map API to make calls to a restful api to return the current weather data. This uses the Modern Javascript Fetch AP along with React hooks and conditonals.',
+        'Weather app in React JS, using the Open Weather Map API to make calls to a restful api to return the current weather data. This uses the Modern Javascript Fetch AP along with React hooks and conditionals.',
       imageUrl: process.env.PUBLIC_URL + '/assets/Weather.png',
       link: 'http://github.com/ThomasFitzgerald61/weather-react',
       url: 'http://messenger-app-prvdr.netlify.app',

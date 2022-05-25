@@ -42,7 +42,7 @@ export default function ImageCard({ project, checked }) {
             rel="stylesheet"
             sx={{ 
               fontSize: 30,
-               color: 'white' 
+               color: '#ffc0cb' 
             }}
             />
         </Button>
@@ -53,7 +53,7 @@ export default function ImageCard({ project, checked }) {
             rel="stylesheet"
             sx={{ 
               fontSize: 35, 
-              color: 'white' 
+              color: '#ffc0cb' 
             }}
             />
         </Button>
