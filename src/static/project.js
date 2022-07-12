@@ -35,6 +35,15 @@ const project = [
       url: '',
       time: 1500,
     },
+    {
+      title: 'Sync-Fusion Dashboard',
+      description:
+        'Sync Fusion Dashboard - React Admin Dashboard App With Theming, Tables, Charts, Calendar, Kanban and More. Built using  Advanced React Best Practices such as folder and file structure, hooks, and refs. Advanced State Management of the entire application using React Context API and most importantly built using Syncfusion and CSS Tailwind',
+      imageUrl: process.env.PUBLIC_URL + '/assets/syncfusion.png',
+      link: 'http://github.com/ThomasFitzgerald61/dashboard',
+      url: 'https://v2-sync-fusion-dashboard.netlify.app/',
+      time: 1500,
+    },
   ];
   
   export default project;

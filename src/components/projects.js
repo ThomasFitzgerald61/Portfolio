@@ -15,6 +15,7 @@ export default function Projects() {
                     My<span className={classes.colorTitle}>Projects.</span>
                     </h1>
          <div className={classes.root} id='next'>
+            <ImageCard project={project[4]} checked={checked} />
             <ImageCard project={project[0]} checked={checked} />
             <ImageCard project={project[1]} checked={checked} />
             <ImageCard project={project[2]} checked={checked} />
@@ -28,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
         minHeight: '50vh',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'flex',
         [theme.breakpoints.down('md')]: {
           flexDirection: 'column',
         },
