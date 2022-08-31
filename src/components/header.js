@@ -41,7 +41,7 @@ export default function Header() {
                 <br />
                 <span className={classes.subtitle}>Welcome to my Portfolio</span>
                 <br />
-                <Scroll to='next' smooth={true} offset={-120}>
+                <Scroll to='Projects' smooth={true} offset={-120}>
                 <IconButton>
                     <ArrowDownwardIcon className={classes.arrowDown} style={{ fontSize: 60 }} />
                 </IconButton>

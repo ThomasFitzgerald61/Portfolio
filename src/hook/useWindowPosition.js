@@ -1,6 +1,6 @@
 import { useLayoutEffect, useState } from 'react';
 
-export default function useWindowPosition(id) {
+export default function UseWindowPosition(id) {
   const [animation, setAnimation] = useState(false);
 
   useLayoutEffect(() => {
