@@ -44,6 +44,15 @@ const project = [
       url: 'https://v2-sync-fusion-dashboard.netlify.app/',
       time: 1500,
     },
+    {
+      title: 'Vite + React Bank-App',
+      description:
+        'Fully Responsive Website with Modern UI/UX in React JS with Tailwind built using Vite a next generation frontend tooling. A Responsive application consisting of a stunning hero section, high-quality assets and gradients, business stats, reusable feature sections with call-to-action buttons, testimonials, and more! Built Using functional components with resuabilty.',
+      imageUrl: process.env.PUBLIC_URL + '/assets/ViteReactApp.png',
+      link: 'https://github.com/ThomasFitzgerald61/Vite_Modern_App',
+      url: 'https://vite-react-bank-app.netlify.app',
+      time: 1500,
+    },
   ];
   
   export default project;

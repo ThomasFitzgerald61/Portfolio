@@ -34,6 +34,7 @@ export default function projects() {
                     My<span className={classes.colorTitle}>Projects.</span>
                     </h1>
          <Carousel responsive={responsive} infinite={true} swipeable={false} draggable={false} showDots={true}>
+            <ImageCard project={project[5]} checked={checked} />
             <ImageCard project={project[4]} checked={checked} />
             <ImageCard project={project[0]} checked={checked} />
             <ImageCard project={project[1]} checked={checked} />

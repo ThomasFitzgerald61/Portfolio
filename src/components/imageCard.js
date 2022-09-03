@@ -67,6 +67,8 @@ export default function ImageCard({ project, checked }) {
 const useStyles = makeStyles({
     root: {
       maxWidth: 645,
+      minHeight: 650,
+      maxHeight: 700,
       margin: '20px',
       opacity: '0.9',
       backgroundColor: 'green',
